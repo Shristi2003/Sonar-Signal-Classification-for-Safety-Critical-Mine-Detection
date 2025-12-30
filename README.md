@@ -18,6 +18,7 @@
 - <a href="#-Future Work">Future Work</a>
 - <a href="#-Author & Contact">Author & Contact</a>
 
+
 ##  Overview
 This project focuses on the critical task of underwater object detection. Using the Sonar Dataset, we develop and evaluate multiple machine learning models to distinguish between rocks and metal cylinders (mines) based on their sonar reflections. It covers the entire data science lifecycle: from data cleaning and statistical feature selection to deep learning implementation.
 
@@ -26,6 +27,7 @@ This project focuses on the critical task of underwater object detection. Using 
 **The Challenge:** Accurately detect whether an underwater object is a rock or a metal cylinder using sonar signal patterns.
 * **Complexity:** The dataset consists of high-dimensional data (60 features) with a very small sample size (208 records), making models prone to overfitting.
 * **Safety Critical:** The primary goal is to ensure high **Recall**, as missing a mine (False Negative) is much more costly than a false alarm.
+
 
 ## 💼 Business Problem
 Manual underwater identification and mine-clearing operations are extremely dangerous, slow, and expensive for both defense and commercial maritime sectors. 
@@ -54,6 +56,7 @@ sonar-signal-classification/
 * **Target:** Binary classification — **Rock (R)** or **Mine (M)**.
 * **Balance:** 53% Mines vs. 47% Rocks (relatively balanced).
 
+
 ## 🛠 Tools and Technologies
 * **Language:** Python 3.x
 * **Data Analysis:** `Pandas`, `NumPy`, `SciPy`
@@ -61,6 +64,7 @@ sonar-signal-classification/
 * **Feature Engineering:** `Scikit-learn` (StandardScaler, LabelEncoder), `Statsmodels` (VIF analysis)
 * **Machine Learning:** `Logistic Regression`, `SVM`, `Random Forest`, `LightGBM`
 * **Deep Learning:** `TensorFlow` / `Keras` (Artificial Neural Networks)
+
 
 ## 🧪 Methods
 1.  **Data Quality Check:** Handled 27 missing values across `Attribute7` and `Attribute12`.
@@ -89,6 +93,8 @@ sonar-signal-classification/
 * **Data Scarcity:** Given the small dataset, regularization (L1/L2) was essential in the Neural Network to prevent the model from simply "memorizing" the training data.
 * **Signal Analysis:** Certain frequency bands exhibit higher energy variance in Mines compared to Rocks, allowing for clear statistical differentiation.
 
+
+
 ## 🖥️ Model Results
 ### Model Performance Summary:
 * **LightGBM Performance:**
@@ -101,6 +107,8 @@ sonar-signal-classification/
 Note: The Neural Network demonstrated superior recall, which is vital for safety-critical applications.
 
 *(Visualizations such as Correlation Heatmaps, Confusion Matrices, and ROC Curves are available within the Jupyter Notebook provided in this repo.)*
+
+
 
 ## ⚙️ How to Run This Project
 1.  **Clone the Repo:**
@@ -116,10 +124,14 @@ Note: The Neural Network demonstrated superior recall, which is vital for safety
     Launch Jupyter Notebook or Google Colab and open `Capstone_P2 (1).ipynb`.
 4.  **Data:** Ensure `sonar1.csv` is in the root directory or update the path in the notebook.
 
+
+
 ## 🏁 Result & Conclusion
 The project successfully demonstrates that statistical feature reduction combined with modern gradient boosting (LightGBM) and Neural Networks can achieve high predictive power even on small datasets. 
 * **LightGBM** provided the best overall classification balance with an **AUC of 0.90**.
 * The **ANN** achieved the mission-critical goal of **90%+ Recall**, ensuring maximum safety in mine detection scenarios.
+
+
 
 ## 🔮 Future Work
 * **1D-CNN Integration:** Use Convolutional Neural Networks to treat the 60 features as a sequence/waveform for better feature extraction.
