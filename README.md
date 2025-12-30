@@ -2,19 +2,36 @@
 
 > A robust machine learning pipeline to classify underwater objects as either Rocks or Mines based on sonar frequency patterns.
 
-## 📌 Overview
+## 📌 Table of Contents
+- <a href="#-Overview">Overview</a>
+- <a href="#-Problem Statement">Problem Statement</a>
+- <a href="#-Business Problem">Business Problem</a>
+- <a href="#-Project Structure">Project Structure</a>
+- <a href="#-Dataset">Dataset</a>
+- <a href="#-Tools and Technologies">Tools and Technologies</a>
+- <a href="#-Methods">Methods</a>
+- <a href="#-Research Questions & Key Findings">Research Questions & Key Findings</a>
+- <a href="#-Key Insights">Key Insights</a>
+- <a href="#-Model Results">Model Results</a>
+- <a href="#-How to Run This Project">How to Run This Project</a>
+- <a href="#-Result & Conclusion">Result & Conclusion</a>
+- <a href="#-Future Work">Future Work</a>
+- <a href="#-Author & Contact">Author & Contact</a>
+
+##  Overview
 This project focuses on the critical task of underwater object detection. Using the Sonar Dataset, we develop and evaluate multiple machine learning models to distinguish between rocks and metal cylinders (mines) based on their sonar reflections. It covers the entire data science lifecycle: from data cleaning and statistical feature selection to deep learning implementation.
+
+
+## ⚓ Problem Statement
+**The Challenge:** Accurately detect whether an underwater object is a rock or a metal cylinder using sonar signal patterns.
+* **Complexity:** The dataset consists of high-dimensional data (60 features) with a very small sample size (208 records), making models prone to overfitting.
+* **Safety Critical:** The primary goal is to ensure high **Recall**, as missing a mine (False Negative) is much more costly than a false alarm.
 
 ## 💼 Business Problem
 Manual underwater identification and mine-clearing operations are extremely dangerous, slow, and expensive for both defense and commercial maritime sectors. 
 * **Operational Risk:** Undetected underwater mines pose a lethal threat to naval vessels and civilian shipping lanes.
 * **Economic Impact:** Accidental encounters with mines lead to catastrophic equipment loss and environmental damage.
 * **The Need:** There is a critical requirement for a reliable, automated system that can process sonar data in real-time to provide high-accuracy classification, allowing human operators to focus on neutralized threats from a safe distance.
-
-## ⚓ Problem Statement
-**The Challenge:** High-dimensional sonar data (60 frequency features) must be analyzed with limited samples (208 records) to ensure reliable classification.
-* **Technical Hurdle:** The risk of overfitting is high due to the small sample-to-feature ratio.
-* **Success Metric:** In this safety-critical context, **Recall** is the primary metric; missing a single mine (False Negative) has significantly higher consequences than a false alarm.
 
 
 ## 📂 Project Structure
@@ -23,12 +40,12 @@ sonar-signal-classification/
 ├── data/
 │   └── sonar1.csv              # Raw Sonar Dataset
 ├── notebooks/
-│   └── Capstone_P2.ipynb       # Main analysis and modeling notebook
-├── reports/
-│   └── Presentation_Slides.pdf # Project presentation and insights
+│   └── Exploratory-Data-Analysis.ipynb       # EDA Notebook
+│   └── Solar-Signal-Analysis.ipynb       # Main analysis and modeling notebook
+
+├── Sonar_Signal_Classification_Report #  insights
 ├── .gitignore                   # Files to exclude (caches, checkpoints)
 ├── README.md                    # Project documentation
-└── requirements.txt             # List of Python dependencies
 
 
 ## 📊 Dataset
@@ -54,7 +71,7 @@ sonar-signal-classification/
 6.  **Modeling:** Evaluated multiple architectures, including Logistic Regression, SVM, and Random Forests, before finalizing LightGBM and ANN for their superior handling of complex signal variance.
 
 
-## Research Questions & Key Findings
+## 🎯 Research Questions & Key Findings
 
 **1. Which frequency bands are most critical for distinguishing Mines from Rocks?**
 * **Finding:** Through statistical T-tests and feature importance ranking, attributes such as **Attribute36, Attribute45, and Attribute10** were identified as the most significant. Metal cylinders (Mines) show distinct energy peaks in these specific bands that are typically absent in natural Rock formations.
@@ -72,7 +89,7 @@ sonar-signal-classification/
 * **Data Scarcity:** Given the small dataset, regularization (L1/L2) was essential in the Neural Network to prevent the model from simply "memorizing" the training data.
 * **Signal Analysis:** Certain frequency bands exhibit higher energy variance in Mines compared to Rocks, allowing for clear statistical differentiation.
 
-## 🖥️ Model Output
+## 🖥️ Model Results
 ### Model Performance Summary:
 * **LightGBM Performance:**
     * **ROC-AUC:** 0.9045
@@ -113,4 +130,4 @@ The project successfully demonstrates that statistical feature reduction combine
 ## 👤 Author & Contact
 * **Name:** Shristi Raushan
 * **Email:** shristiraushan@gmail.com
-* **LinkedIn:** [linkedin.com/in/your-profile](https://linkedin.com/in/shristi-raushan/)
+* **LinkedIn:** [linkedin.com/in/shristi-raushan/](https://www.linkedin.com/in/shristi-raushan/)
