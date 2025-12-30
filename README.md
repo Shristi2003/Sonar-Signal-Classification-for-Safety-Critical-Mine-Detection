@@ -1,4 +1,4 @@
-# Sonar Signal Classification Using Machine Learning
+# Sonar Signal Classification for Safety-Critical Mine Detection
 
 > A robust machine learning pipeline to classify underwater objects as either Rocks or Mines based on sonar frequency patterns.
 
