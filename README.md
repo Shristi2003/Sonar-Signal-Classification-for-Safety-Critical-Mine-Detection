@@ -121,7 +121,7 @@ Note: The Neural Network demonstrated superior recall, which is vital for safety
     pip install pandas scikit-learn tensorflow lightgbm seaborn matplotlib
     ```
 3.  **Run the Notebook:**
-    Launch Jupyter Notebook or Google Colab and open `Capstone_P2 (1).ipynb`.
+    Launch Jupyter Notebook or Google Colab and open `Solar-System-Analysis.ipynb`.
 4.  **Data:** Ensure `sonar1.csv` is in the root directory or update the path in the notebook.
 
 
