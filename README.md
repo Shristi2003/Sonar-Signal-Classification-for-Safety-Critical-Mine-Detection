@@ -5,12 +5,6 @@
 ## 📌 Overview
 This project focuses on the critical task of underwater object detection. Using the Sonar Dataset, we develop and evaluate multiple machine learning models to distinguish between rocks and metal cylinders (mines) based on their sonar reflections. It covers the entire data science lifecycle: from data cleaning and statistical feature selection to deep learning implementation.
 
-
-## ⚓ Problem Statement
-**The Challenge:** Accurately detect whether an underwater object is a rock or a metal cylinder using sonar signal patterns.
-* **Complexity:** The dataset consists of high-dimensional data (60 features) with a very small sample size (208 records), making models prone to overfitting.
-* **Safety Critical:** The primary goal is to ensure high **Recall**, as missing a mine (False Negative) is much more costly than a false alarm.
-
 ## 💼 Business Problem
 Manual underwater identification and mine-clearing operations are extremely dangerous, slow, and expensive for both defense and commercial maritime sectors. 
 * **Operational Risk:** Undetected underwater mines pose a lethal threat to naval vessels and civilian shipping lanes.
